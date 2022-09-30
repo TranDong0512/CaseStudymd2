@@ -41,11 +41,10 @@ export class Album {
     findAll() {
         for (let i = 0; i< this._listTheSong.length; i++){
             if( this._listTheSong.length == 0){
-                console.log("khong co bai hat nao ")
-            }else {
-                return this.listTheSong
+                return "khong co bai hat nao "
             }
         }
+        return this.listTheSong
 
     }
 

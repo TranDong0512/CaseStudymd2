@@ -1,12 +1,12 @@
 export class TheSong{
     private _id: number;
     private _name: string;
-    private _composing: string;
+    private _composer: string;
 
     constructor(id: number, name: string, composing: string) {
         this._id = id;
         this._name = name;
-        this._composing = composing;
+        this._composer = composing;
     }
 
     get id(): number {
@@ -25,11 +25,11 @@ export class TheSong{
         this._name = value;
     }
 
-    get composing(): string {
-        return this._composing;
+    get composer(): string {
+        return this._composer;
     }
 
-    set composing(value: string) {
-        this._composing = value;
+    set composer(value: string) {
+        this._composer = value;
     }
 }

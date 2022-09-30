@@ -5,7 +5,7 @@ var TheSong = /** @class */ (function () {
     function TheSong(id, name, composing) {
         this._id = id;
         this._name = name;
-        this._composing = composing;
+        this._composer = composing;
     }
     Object.defineProperty(TheSong.prototype, "id", {
         get: function () {
@@ -27,12 +27,12 @@ var TheSong = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(TheSong.prototype, "composing", {
+    Object.defineProperty(TheSong.prototype, "composer", {
         get: function () {
-            return this._composing;
+            return this._composer;
         },
         set: function (value) {
-            this._composing = value;
+            this._composer = value;
         },
         enumerable: false,
         configurable: true

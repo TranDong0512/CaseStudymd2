@@ -7,6 +7,10 @@ export class ManagerAlbum implements IManager<Album> {
     private _user: Account
 
 
+    constructor(user: Account) {
+        this._user = user;
+    }
+
     get user(): Account {
         return this._user;
     }
@@ -33,7 +37,7 @@ export class ManagerAlbum implements IManager<Album> {
         for (let i = 0; i < this.listAlbumManager.length; i++) {
             if (this.listAlbumManager[i].id == id) {
                 return this.listAlbumManager[i]
-             }
+            }
         }
         return -1
     }

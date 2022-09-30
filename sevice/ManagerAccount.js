@@ -15,9 +15,9 @@ var ManagerAccount = /** @class */ (function () {
     };
     // @ts-ignore
     ManagerAccount.prototype.findByIndex = function (index) {
-        return undefined;
+        return;
     };
-    ManagerAccount.prototype.seachIndex = function (name, passWord) {
+    ManagerAccount.prototype.searchIndex = function (name, passWord) {
         for (var i = 0; i < this.listAccountManager.length; i++) {
             if (this.listAccountManager[i].userName == name && this.listAccountManager[i].userPass == passWord) {
                 return i;
@@ -26,15 +26,7 @@ var ManagerAccount = /** @class */ (function () {
         return -1;
     };
     ManagerAccount.prototype.findName = function (name, pass) {
-        return this.listAccountManager[this.seachIndex(name, pass)];
-    };
-    ManagerAccount.prototype.findAlbumByUserId = function (id) {
-        for (var i = 0; i < this.listAccountManager.length; i++) {
-            if (this.listAccountManager[i].id == id) {
-                return this.listAccountManager[i];
-            }
-        }
-        return null;
+        return this.listAccountManager[this.searchIndex(name, pass)];
     };
     return ManagerAccount;
 }());

@@ -2,8 +2,9 @@
 exports.__esModule = true;
 exports.ManagerAlbum = void 0;
 var ManagerAlbum = /** @class */ (function () {
-    function ManagerAlbum() {
+    function ManagerAlbum(user) {
         this.listAlbumManager = [];
+        this._user = user;
     }
     Object.defineProperty(ManagerAlbum.prototype, "user", {
         get: function () {

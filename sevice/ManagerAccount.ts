@@ -1,6 +1,5 @@
 import {Account} from "../modun/account";
 import {IManager} from "./IManager";
-import {ManagerAlbum} from "./ManagerAlbum";
 
 export class ManagerAccount implements IManager<Account> {
     listAccountManager: Account[] = []
@@ -19,10 +18,10 @@ export class ManagerAccount implements IManager<Account> {
 
     // @ts-ignore
     findByIndex(index: number): Account {
-        return undefined;
+        return
     }
 
-    seachIndex( name: string, passWord: number){
+    searchIndex(name: string, passWord: number){
         for (let i = 0; i < this.listAccountManager.length; i++) {
             if( this.listAccountManager[i].userName == name && this.listAccountManager[i].userPass == passWord){
                 return i
@@ -31,15 +30,7 @@ export class ManagerAccount implements IManager<Account> {
     }
 
     findName( name: string, pass: number){
-        return this.listAccountManager[this.seachIndex(name, pass)]
-    }
-    findAlbumByUserId(id: number): Account {
-        for (let i = 0; i < this.listAccountManager.length; i++) {
-            if (this.listAccountManager[i].id == id) {
-                return this.listAccountManager[i];
-            }
-        }
-        return null;
+        return this.listAccountManager[this.searchIndex(name, pass)]
     }
 
 }

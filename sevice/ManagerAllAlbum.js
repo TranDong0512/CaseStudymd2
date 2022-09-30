@@ -19,7 +19,7 @@ var ManagerAllAlbum = /** @class */ (function () {
     };
     ManagerAllAlbum.prototype.findAlbumByUserId = function (id) {
         for (var i = 0; i < this.listAllAlbumManager.length; i++) {
-            if (this.listAllAlbumManager[i].user != undefined && this.listAllAlbumManager[i].user.id == id) {
+            if (this.listAllAlbumManager[i].user.id == id) {
                 return this.listAllAlbumManager[i];
             }
         }

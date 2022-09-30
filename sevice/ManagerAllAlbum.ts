@@ -21,9 +21,9 @@ export class ManagerAllAlbum implements IManager<ManagerAlbum> {
         return undefined;
     }
 
-    findAlbumByUserId(id: number): ManagerAlbum {
+    findAlbumByUserId(id: number): ManagerAlbum | null{
         for (let i = 0; i < this.listAllAlbumManager.length; i++) {
-            if (this.listAllAlbumManager[i].user != undefined && this.listAllAlbumManager[i].user.id == id) {
+            if (this.listAllAlbumManager[i].user.id == id) {
                return this.listAllAlbumManager[i];
             }
         }

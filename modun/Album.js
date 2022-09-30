@@ -43,12 +43,10 @@ var Album = /** @class */ (function () {
     Album.prototype.findAll = function () {
         for (var i = 0; i < this._listTheSong.length; i++) {
             if (this._listTheSong.length == 0) {
-                console.log("khong co bai hat nao ");
-            }
-            else {
-                return this.listTheSong;
+                return "khong co bai hat nao ";
             }
         }
+        return this.listTheSong;
     };
     Album.prototype.findById = function (id) {
         for (var i = 0; i < this._listTheSong.length; i++) {
